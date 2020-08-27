@@ -4,6 +4,15 @@ const initialState = {}
 
 export default function apiReducer(state = initialState, action) {
   switch (action.type) {
+    case types.NEWCONNECTOR27AUG00_GET__READ:
+    case types.NEWCONNECTOR27AUG00_GET__READ_SUCCEEDED:
+    case types.NEWCONNECTOR27AUG00_GET__READ_FAILED:
+    case types.NEWCONNECTOR27AUG00_POST__READ:
+    case types.NEWCONNECTOR27AUG00_POST__READ_SUCCEEDED:
+    case types.NEWCONNECTOR27AUG00_POST__READ_FAILED:
+    case types.NEWCONNECTOR27AUG00_DELETE__READ:
+    case types.NEWCONNECTOR27AUG00_DELETE__READ_SUCCEEDED:
+    case types.NEWCONNECTOR27AUG00_DELETE__READ_FAILED:
     case types.API_V1_CUSTOMTEXT_LIST:
     case types.API_V1_CUSTOMTEXT_LIST_SUCCEEDED:
     case types.API_V1_CUSTOMTEXT_LIST_FAILED:

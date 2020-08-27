@@ -18,6 +18,15 @@ const mobile27API = axios.create({
   baseURL: "https://mobile-27-aug-dev-9482.botics.co/",
   headers: { Accept: "application/json", "Content-Type": "application/json" }
 })
+function newconnector27aug00_get__read() {
+  return newConnector27aug00.get(`/`)
+}
+function newconnector27aug00_post__read() {
+  return newConnector27aug00.post(`/`)
+}
+function newconnector27aug00_delete__read() {
+  return newConnector27aug00.delete(`/`)
+}
 function api_v1_customtext_list() {
   return mobile27API.get(`/api/v1/customtext/`)
 }
@@ -82,6 +91,9 @@ function rest_auth_user_partial_update(requestBody) {
   return mobile27API.patch(`/rest-auth/user/`, requestBody)
 }
 export const apiService = {
+  newconnector27aug00_get__read,
+  newconnector27aug00_post__read,
+  newconnector27aug00_delete__read,
   api_v1_customtext_list,
   api_v1_customtext_read,
   api_v1_customtext_update,

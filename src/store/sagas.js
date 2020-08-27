@@ -1,6 +1,51 @@
 import { put, call, all, spawn, takeEvery } from "redux-saga/effects"
 import { apiService } from "./services"
 import * as types from "./constants"
+function* newconnector27aug00_get__readWorker(action) {
+  try {
+    const result = yield call(apiService.newconnector27aug00_get__read, action)
+    yield put(actions.newconnector27aug00_get__readSucceeded(result))
+  } catch (err) {
+    yield put(actions.newconnector27aug00_get__readFailed(err))
+  }
+}
+function* newconnector27aug00_get__readWatcher() {
+  yield takeEvery(
+    types.NEWCONNECTOR27AUG00_GET__READ,
+    newconnector27aug00_get__readWorker
+  )
+}
+function* newconnector27aug00_post__readWorker(action) {
+  try {
+    const result = yield call(apiService.newconnector27aug00_post__read, action)
+    yield put(actions.newconnector27aug00_post__readSucceeded(result))
+  } catch (err) {
+    yield put(actions.newconnector27aug00_post__readFailed(err))
+  }
+}
+function* newconnector27aug00_post__readWatcher() {
+  yield takeEvery(
+    types.NEWCONNECTOR27AUG00_POST__READ,
+    newconnector27aug00_post__readWorker
+  )
+}
+function* newconnector27aug00_delete__readWorker(action) {
+  try {
+    const result = yield call(
+      apiService.newconnector27aug00_delete__read,
+      action
+    )
+    yield put(actions.newconnector27aug00_delete__readSucceeded(result))
+  } catch (err) {
+    yield put(actions.newconnector27aug00_delete__readFailed(err))
+  }
+}
+function* newconnector27aug00_delete__readWatcher() {
+  yield takeEvery(
+    types.NEWCONNECTOR27AUG00_DELETE__READ,
+    newconnector27aug00_delete__readWorker
+  )
+}
 function* api_v1_customtext_listWorker(action) {
   try {
     const result = yield call(apiService.api_v1_customtext_list, action)
@@ -278,6 +323,9 @@ function* rest_auth_user_partial_updateWatcher() {
 }
 export default function* rootSaga() {
   const sagas = [
+    newconnector27aug00_get__readWatcher,
+    newconnector27aug00_post__readWatcher,
+    newconnector27aug00_delete__readWatcher,
     api_v1_customtext_listWatcher,
     api_v1_customtext_readWatcher,
     api_v1_customtext_updateWatcher,

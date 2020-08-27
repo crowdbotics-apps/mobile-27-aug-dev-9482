@@ -277,3 +277,36 @@ export const rest_auth_user_partial_updateFailed = error => ({
   type: types.REST_AUTH_USER_PARTIAL_UPDATE_FAILED,
   error
 })
+export const newconnector27aug00_get__read = () => ({
+  type: types.NEWCONNECTOR27AUG00_GET__READ
+})
+export const newconnector27aug00_get__readSucceeded = response => ({
+  type: types.NEWCONNECTOR27AUG00_GET__READ_SUCCEEDED,
+  response
+})
+export const newconnector27aug00_get__readFailed = error => ({
+  type: types.NEWCONNECTOR27AUG00_GET__READ_FAILED,
+  error
+})
+export const newconnector27aug00_post__read = () => ({
+  type: types.NEWCONNECTOR27AUG00_POST__READ
+})
+export const newconnector27aug00_post__readSucceeded = response => ({
+  type: types.NEWCONNECTOR27AUG00_POST__READ_SUCCEEDED,
+  response
+})
+export const newconnector27aug00_post__readFailed = error => ({
+  type: types.NEWCONNECTOR27AUG00_POST__READ_FAILED,
+  error
+})
+export const newconnector27aug00_delete__read = () => ({
+  type: types.NEWCONNECTOR27AUG00_DELETE__READ
+})
+export const newconnector27aug00_delete__readSucceeded = response => ({
+  type: types.NEWCONNECTOR27AUG00_DELETE__READ_SUCCEEDED,
+  response
+})
+export const newconnector27aug00_delete__readFailed = error => ({
+  type: types.NEWCONNECTOR27AUG00_DELETE__READ_FAILED,
+  error
+})
